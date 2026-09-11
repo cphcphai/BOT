@@ -177,7 +177,17 @@ def queue_join_request(jr):
 def moderate_message(message):
     chat = message.get("chat") or {}
     user = message.get("from") or {}
+        # Private /start command
+    if chat.get("type") == "private":
+        text = message.get("text", "").strip()
 
+        if text == "/start" or text.startswith("/start "):
+            send_message(
+                chat["id"],
+                "👋 Galvnic Moderation Bot is active.\n\n🛡️ This bot automatically manages join requests and keeps the group clean."
+            )
+        return
+        
     if chat.get("type") not in ("group", "supergroup"):
         return
     if user.get("is_bot"):

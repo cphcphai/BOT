@@ -112,7 +112,7 @@ def compact_text(text):
 ABUSE_PATTERNS = [
     re.compile(r"\b(?:fuck|f+u+c+k+|motherf+|bastard|asshole|idiot|moron|dumbass|stupid)\b", re.I),
     re.compile(r"\b(?:madarch|behench|bhench|maa|rndi|dharam|hizda|bahan|bkl|madar|mad|lund|pesa|chod|chut|gand|haram|kamina|kamine|kutte|kutti)\w*", re.I),
-    re.compile(r"\b(?:bc|mc|bsdk|bkl)\b", re.I),
+    re.compile(r"\b(?:bc|mc|bsdk|aimai|aim ai|crack|carcked|bkl)\b", re.I),
 ]
 SCAM_PATTERNS = [
     re.compile(r"\b(?:scam|merko|msg|message|de|lo|mujhe|pesa|paisa|join|Dm|scammer|fraud|fraudster|phishing|ponzi)\b", re.I),
@@ -123,7 +123,7 @@ SCAM_PATTERNS = [
     re.compile(r"\b(?:prize|winner|giveaway|reward)\b.{0,80}\b(?:claim|pay|fee|send|verify)\b", re.I),
 ]           
 PROMO_PATTERNS = [
-    re.compile(r"\b(?:promo|dm|free|buy|mujhe|chiye|key|free|password|login|dm|message|free|promotion|referral|refer|affiliate|reseller|advertis|sponsor)\w*\b", re.I),
+    re.compile(r"\b(?:promo|dm|free|buy|mujhe|aimai|aim ai|chiye|key|free|password|login|dm|message|free|promotion|referral|refer|affiliate|reseller|advertis|sponsor)\w*\b", re.I),
     re.compile(r"\b(?:my|our)\s+(?:channel|group|bot|app|page|website|service)\b", re.I),
     re.compile(r"\b(?:dm|message|contact|text)\s+me\b", re.I),
     re.compile(r"\b(?:use|enter)\s+(?:my\s+)?(?:code|referral)\b", re.I),
